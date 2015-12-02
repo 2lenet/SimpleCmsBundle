@@ -63,11 +63,7 @@ class PageAdmin extends RouteAdmin
             ))
                 ->add('label', null, array('required' => false))
                 ->add('title')
-                ->add(
-                    'body',
-                     $this->ivoryCkeditor ? 'ckeditor' : 'textarea',
-                     $this->ivoryCkeditor
-                )
+                ->add('body','ckeditor')
             ->end()
             ->with('form.group_advanced', array(
                 'translation_domain' => 'CmfRoutingBundle',
